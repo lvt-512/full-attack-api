@@ -49,11 +49,6 @@ $(function () {
   changeBackground(true);
 });
 
-// PLay video
-function playVideo() {
-  window.location.replace("./Film-player/index.html");
-}
-
 // toggle Intro
 function closeIntro() {
   var intro = document.querySelector(".intro");
