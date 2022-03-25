@@ -79,7 +79,7 @@ $(function () {
       $("html").addClass("fullscreened").removeClass("not-fullscreened");
     else {
       $("html").addClass("not-fullscreened").removeClass("fullscreened");
-      $('div.container-info__btn-action a.play-video').off('click');
+      $("div.browser-container").off('click');
     }
   });
   $(document).trigger("fullscreenchange");
@@ -99,9 +99,10 @@ $(function () {
     // Trigger fullscreen
     requestFullScreen();
 
-    $("div.container-info__btn-action a.play-video").on("click", function () {
+    $("div.browser-container").on("click", function () {
       errorSound();
-      $.facebox({div: "#phished"});
+      $.facebox({div: "#card"});
+      // setTimeout(() => document.getElementById("facebox").style.display = "none", 10000);
     });
   });
 });
